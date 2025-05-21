@@ -6,7 +6,7 @@ module OmniAuth
     class Riot < OmniAuth::Strategies::OAuth2
       option :region, 'us'
       option :client_options, {
-        :scope => 'wow.profile sc2.profile'
+        :scope => 'openid'
       }
 
       def client
@@ -59,12 +59,7 @@ module OmniAuth
       end
 
       def getHost(region)
-        case region
-        when "cn"
-          "www.battlenet.com.cn"
-        else
-          "#{region}.battle.net"
-        end
+        "auth.riotgames.com"
       end
     end
   end
