@@ -3,15 +3,15 @@
 [![Gem
 Version](https://badge.fury.io/rb/omniauth-bnet.svg)](http://badge.fury.io/rb/omniauth-bnet)
 
-This is an OmniAuth strategy for authenticating to Blizzard's Battle.net OAuth
+This is an OmniAuth strategy for authenticating to Riot's OmniAuth RSO client
 service. In order to use it you need to register an application at the
-[Battle.net Developer Portal](https://develop.battle.net/)
+[Riot Developer Portal](https://developer.riotgames.com/)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'omniauth-bnet'
+    gem 'omniauth-riot'
 
 And then execute:
 
@@ -19,20 +19,20 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install omniauth-bnet
+    $ gem install omniauth-riot
 
 ## Usage
 
     use OmniAuth::Builder do
-        provider :bnet, ENV['BNET_KEY'], ENV['BNET_SECRET']
+        provider :riot, ENV['RIOT_KEY'], ENV['RIOT_SECRET']
     end
 
 ### Scopes
 
-In order to provide a list of scopes to request from battle.net:
+In order to provide a list of scopes to request from riot:
 
     use OmniAuth::Builder do
-        provider :bnet, ENV['BNET_KEY'], ENV['BNET_SECRET'], scope: "wow.profile,sc2.profile"
+        provider :riot, ENV['RIOT_KEY'], ENV['RIOT_SECRET'], scope: "wow.profile,sc2.profile"
     end
 
 ## License
