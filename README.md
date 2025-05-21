@@ -1,7 +1,4 @@
-# OmniAuth Bnet
-
-[![Gem
-Version](https://badge.fury.io/rb/omniauth-bnet.svg)](http://badge.fury.io/rb/omniauth-bnet)
+# OmniAuth Riot
 
 This is an OmniAuth strategy for authenticating to Riot's OmniAuth RSO client
 service. In order to use it you need to register an application at the
