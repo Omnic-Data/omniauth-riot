@@ -1,42 +1,63 @@
 PATH
   remote: .
   specs:
-    omniauth-bnet (2.0.0)
-      omniauth (~> 1.0)
-      omniauth-oauth2 (~> 1.1)
+    omniauth-riot (1.0.0)
+      omniauth-oauth2
 
 GEM
   remote: https://rubygems.org/
   specs:
-    faraday (0.12.2)
-      multipart-post (>= 1.2, < 3)
-    hashie (3.5.7)
-    jwt (1.5.6)
-    multi_json (1.13.1)
-    multi_xml (0.6.0)
-    multipart-post (2.0.0)
-    oauth2 (1.4.0)
-      faraday (>= 0.8, < 0.13)
-      jwt (~> 1.0)
-      multi_json (~> 1.3)
+    base64 (0.2.0)
+    bigdecimal (3.1.9)
+    faraday (2.13.1)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-net_http (3.4.0)
+      net-http (>= 0.5.0)
+    hashie (5.0.0)
+    json (2.12.0)
+    jwt (2.10.1)
+      base64
+    logger (1.7.0)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
+    net-http (0.6.0)
+      uri
+    oauth2 (2.0.10)
+      faraday (>= 0.17.3, < 4.0)
+      jwt (>= 1.0, < 4.0)
+      logger (~> 1.2)
       multi_xml (~> 0.5)
-      rack (>= 1.2, < 3)
-    omniauth (1.8.1)
-      hashie (>= 3.4.6, < 3.6.0)
-      rack (>= 1.6.2, < 3)
-    omniauth-oauth2 (1.5.0)
-      oauth2 (~> 1.1)
-      omniauth (~> 1.2)
-    rack (2.0.5)
-    rake (0.9.6)
+      rack (>= 1.2, < 4)
+      snaky_hash (~> 2.0)
+      version_gem (>= 1.1.8, < 3)
+    omniauth (2.1.3)
+      hashie (>= 3.4.6)
+      rack (>= 2.2.3)
+      rack-protection
+    omniauth-oauth2 (1.8.0)
+      oauth2 (>= 1.4, < 3)
+      omniauth (~> 2.0)
+    rack (3.1.15)
+    rack-protection (4.1.1)
+      base64 (>= 0.1.0)
+      logger (>= 1.6.0)
+      rack (>= 3.0.0, < 4)
+    rake (13.2.1)
+    snaky_hash (2.0.1)
+      hashie
+      version_gem (~> 1.1, >= 1.1.1)
+    uri (1.0.3)
+    version_gem (1.1.8)
 
 PLATFORMS
-  ruby
+  x86-mingw32
 
 DEPENDENCIES
-  bundler (~> 1.6)
-  omniauth-bnet!
-  rake (~> 0)
+  bundler (~> 2.5.23)
+  omniauth-riot!
+  rake
 
 BUNDLED WITH
-   1.16.4
+   2.5.23

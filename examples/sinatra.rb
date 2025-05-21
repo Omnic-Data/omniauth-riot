@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
-# This example provides login links for github and bnet in order to test that
-# bnet oauth is correctly working.
+# This example provides login links for github and riot in order to test that
+# riot oauth is correctly working.
 
 require 'omniauth'
-require 'omniauth-bnet'
+require 'omniauth-riot'
 require 'omniauth-github'
 require 'sinatra'
 
@@ -15,7 +15,7 @@ require 'sinatra'
 configure do
   use OmniAuth::Builder do
     provider :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET']
-    provider :bnet, ENV['BNET_ID'], ENV['BNET_SECRET'], scope: "wow.profile sc2.profile"
+    provider :riot, ENV['RIOT_ID'], ENV['RIOT_SECRET'], scope: "wow.profile sc2.profile"
   end
 
   OmniAuth.config.full_host = "https://localhost"
@@ -42,7 +42,7 @@ get '/' do
   if current_user
     erb '<h1>Sinatra OAuth Test</h1><%=current_user%><br><pre><%=h current_user_info%></pre><br><pre><%=h session[:debug]%></pre><br><a href="/logout">Logout</a>'
   else
-    erb '<h1>Sinatra OAuth Test</h1><a href="/auth/github">Login with Github</a><br><a href="/auth/bnet">Login with Bnet</a>'
+    erb '<h1>Sinatra OAuth Test</h1><a href="/auth/github">Login with Github</a><br><a href="/auth/riot">Login with Riot</a>'
   end
 end
 
