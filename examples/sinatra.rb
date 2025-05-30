@@ -15,7 +15,7 @@ require 'sinatra'
 configure do
   use OmniAuth::Builder do
     provider :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET']
-    provider :riot, ENV['RIOT_ID'], ENV['RIOT_SECRET'], scope: "wow.profile sc2.profile"
+    provider :riot, ENV['RIOT_ID'], ENV['RIOT_SECRET'], scope: "openid"
   end
 
   OmniAuth.config.full_host = "https://localhost"
